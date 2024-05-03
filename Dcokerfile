@@ -18,5 +18,5 @@ FROM openjdk:latest
 WORKDIR /app
 COPY --from=angular-build /app/frontend/dist/ ./frontend/dist/
 COPY --from=spring-boot-build /app/backend/target/*.jar ./backend/
-EXPOSE 8080
+EXPOSE 8081
 CMD ["java", "-jar", "./backend/*.jar"]
